@@ -31,17 +31,33 @@ body{
     z-index: -1;
     position: fixed;
 }
+.HBottom{
+    display: grid;
+    grid-template-areas: 'ah';
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+}
+.HTable{
+    grid-area: ah;
+}
+.HTable table{
+    padding: 4px;
+    text-align: center;
+}
+.HTable td{
+    padding: 12px;
+}
 .scroll-down{
     border: 3px solid greenyellow;
     border-radius: 8px;
     font-weight: bold;
     background-color: beige;
-    width: 120px;
+    width: 118px;
     text-align: left;
     position: absolute;
-    bottom: 0%;
     right: 0%;
-    float: right;
+    bottom: 0%;
     padding-right: 6pt;
 }
 .scroll-down a{
@@ -85,7 +101,7 @@ body{
 #Profile{
     background-color: aliceblue;
     color: black;
-    height: 760px;
+    height: 700px;
     width: auto;
 }
 #Profile .AProfile{
@@ -118,7 +134,6 @@ body{
     width: 75px;
 }
 .Pgrid{
-    
     display: grid;
     grid-area: bottom;
     grid-template-areas: 'a left main right b' ;
@@ -155,48 +170,10 @@ body{
     width: 75px;
     grid-area: b;
 }
-.SocialHandles{
-    grid-area: asd;
-    display: grid;
-    grid-template-areas: 'as bs cs';
-}
-.SHP1{
-    grid-area: as;
-    width: 300px;
-}
-.SHP2{
-    grid-area: cs;
-    width: 300px;
-}
-.SHData{
-    border: 2px solid black;
-    border-radius: 20pt;
-    grid-area: bs;
-    width: 700px;
-    display: grid;
-    grid-template-areas: 'li gh'
-    'sk in';
-}
-.SHData li{
-    list-style-type: none;
-    padding: 0px;
-}
-.LinkedIn{
-    grid-area: li;
-}
-.Skype{
-    grid-area: sk;
-}
-.Github{
-    grid-area: gh;
-}
-.Instagram{
-    grid-area: in;
-}
 #Experience{
-    background-color: aqua;
+    background-color: rgb(248, 219, 125);
     color: black;
-    height: 1100px;
+    height: auto;
     width: auto;
 }
 #Experience .AExperience{
@@ -247,7 +224,7 @@ body{
 .EDU12{
     padding-top: 30px;
     grid-area: edu12;
-    background-color: aqua;
+    background-color: rgb(248, 219, 125);
 }
 .EDU2{
     grid-area: edu2;
@@ -261,7 +238,7 @@ body{
 }
 #Abilites{
     color: black;
-    background-color: darkseagreen;
+    background-color: rgb(247, 140, 140);
     height: auto;
     width: auto;
 }
@@ -298,8 +275,14 @@ body{
 .AMData1{
     grid-area: ada;
 }
+.AMData1 td{
+    width: 300px;
+}
 .AMData2{
     grid-area: adb;
+}
+.TTable td{
+    width: 300px;
 }
 .AMData3{
     grid-area: adc;
@@ -345,19 +328,30 @@ body{
     grid-area: bottom;
     display: grid;
     grid-template-areas: 'd1'
-    'd2'
-    'd3';
+    'd2';
+}
+.PRMDPersonal{
+    grid-area: d1;
+    display: grid;
+    grid-template-areas: 'pp1'
+    'pp2';
+}
+.PRMDProfessional{
+    grid-area: d2;
+    display: grid;
+    grid-template-areas: 'ppp1'
+    'ppp2';
 }
 .PRMD1{
-    grid-area: d1;
+    grid-area: pp1;
     height: 250px;
 }
 .PRMD2{
-    grid-area: d2;
+    grid-area: ppp1;
     height: 250px;
 }
 .PRMD3{
-    grid-area: d3;
+    grid-area: ppp2;
     height: 250px;
 }
 .PRPadding2{
