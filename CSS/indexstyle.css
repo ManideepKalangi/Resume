@@ -332,6 +332,7 @@ body{
     display: grid;
     grid-template-areas: 'd1'
     'd2';
+    font-size: medium;
 }
 .PRMDPersonal{
     grid-area: d1;
