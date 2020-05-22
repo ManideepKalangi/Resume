@@ -81,13 +81,12 @@ body{
     padding-bottom: 5px;
 }
 .NavBar{
-    border: 3px solid greenyellow;
+    border: 3px solid rgb(129, 208, 245);
     border-radius: 8px;
     background-color: beige;
-    float: right;
-    padding-right: 3pt;
-    width: auto;
     font-weight: bold;
+    position: absolute;
+    right: 0%;
     text-align: center;
 }
 .NavBar a{
@@ -153,7 +152,7 @@ body{
     grid-area: left;
 }
 .PAboutMe1{
-    width: 400px;
+    width: auto;
     grid-area: right;
 }
 .PAboutMe1 h4{
@@ -364,7 +363,7 @@ body{
 }
 #Hobbies{
     color: black;
-    background-color: rgb(247, 135, 94);
+    background-color: rgb(245, 185, 163);
     height: 700px;
     width: auto;
 }
@@ -417,7 +416,7 @@ body{
 }
 #Intrests{
     color: black;
-    background-color: rgb(120, 163, 245);
+    background-color: floralwhite;
     height: 700px;
     width: auto;
 }
