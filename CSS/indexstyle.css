@@ -59,9 +59,10 @@ body{
     width: 118px;
     text-align: left;
     position: absolute;
-    right: 0%;
+    left: 0%;
     bottom: 0%;
     padding-right: 6pt;
+    z-index: 8;
 }
 .scroll-down a{
     text-decoration: none;
@@ -79,81 +80,111 @@ body{
 .main li{
     padding-top: 5px;
     padding-bottom: 5px;
+    padding-left: 0px;
 }
-.NavBar{
-    border: 3px solid rgb(129, 208, 245);
+.nav{
+    border: 3px solid black;
     border-radius: 8px;
-    background-color: beige;
     font-weight: bold;
-    position: absolute;
-    right: 0%;
-    text-align: center;
+    position: fixed;
+    left: 0%;
+    top: 10%;
+    z-index: 7;
+    text-align: left;
 }
-.NavBar a{
+.nav a{
     color: black;
     text-decoration: none;
-    padding-left: 0%;
 }
-.NavBar ul{
+.nav ul{
+    padding-left: 20px;
+    padding-right: 20px;
     list-style-type: none;
 }
-.NavBar a:hover{
+.nav a:hover{
     color: blue;
 }
 #Profile{
+    z-index: 1;
     background-color: aliceblue;
     color: black;
-    height: 700px;
+    height: auto;
     width: auto;
+    padding-left: 100px;
+    padding-bottom: 30px;
 }
-#Profile .AProfile{
-    background-color: aqua;
-    border: 2px solid black;
-    border-radius: 8px;
-    padding: 2px;
+.ProfileData table{
+    text-align: left;
+    padding-left: 20px;
 }
 .ProfileData{
     display: grid;
     text-align: center;
     grid-template-areas: 'top'
-    'bottom'
-    'asd';
+    'bottom';
 }
 .PDHeading{
-    grid-row: top;
+    grid-row: 'top';
     display: grid;
     grid-template-areas: 'ap  bp cp';
 }
 .PDHP1{
-    grid-area: ap;
-    width: 75px;
+    grid-area: 'ap';
+    width: auto;
 }
 .PDHmain{
-    grid-area: bp;
+    grid-area: 'bp';
 }
 .PDHP2{
-    grid-area: cp;
-    width: 75px;
+    grid-area: 'cp';
+    width: auto;
 }
 .Pgrid{
     display: grid;
-    grid-area: bottom;
-    grid-template-areas: 'a left main right b' ;
-    grid-template-columns: 1fr;
+    grid-area: 'bottom';
+    grid-template-areas: 
+    'left'
+    'main' 
+    'right' ;
 }
 .ProfileImgOut{
-    width:250px;
+    color: aliceblue;
+    grid-area: 'main';
+    display: grid;
+    grid-template-areas: 'imga imgb imgc';
+}
+.imga{
+    grid-area: 'imga';
+    width: auto;
+}
+.imgb{
+    grid-area: 'imgb';
+    width:200px;
     height: 250px;
-    grid-area: main;
+}
+.imgc{
+    grid-area: 'imgc';
+    width: auto;
 }
 .PAboutMe{
-    padding-right: 20px;
-    width: 400px;
-    grid-area: left;
+    padding-left: 150px;
+    width: 800px;
+    grid-area: 'left';
 }
 .PAboutMe1{
     width: auto;
-    grid-area: right;
+    grid-area: 'right';
+    display: grid;
+    grid-template-areas: 'pba pbb pbc';
+}
+.pba{
+    grid-area: 'pba';
+}
+.pbb{
+    grid-area: 'pbb';
+}
+.pbc{
+    grid-area: 'pbc';
 }
 .PAboutMe1 h4{
     text-align: left;
@@ -164,17 +195,10 @@ body{
     height: 200px;
     border-radius: 100px;
 }
-.Padding1{
-    width: 75px;
-    grid-area: a;
-}
-.Padding2{
-    width: 75px;
-    grid-area: b;
-}
 #Experience{
     background-color: rgb(248, 219, 125);
     color: black;
+    z-index: 2;
     height: auto;
     width: auto;
 }
@@ -189,12 +213,12 @@ body{
     grid-template-areas: 'ae be ce';
 }
 .E1{
-    grid-area: ae;
+    grid-area: 'ae';
     width: 300px;
     text-align: left;
 }
 .E2{
-    grid-area: be;
+    grid-area: 'be';
     width: 600px;
     display: grid;
     grid-template-areas: 
@@ -204,46 +228,48 @@ body{
     'ach';
 }
 .Education{
-    grid-area: edu;
+    grid-area: 'edu';
 }
 .Internship{
-    grid-area: int;
+    grid-area: 'int';
 }
 .Achievement{
-    grid-area: ach;
+    grid-area: 'ach';
 }
 .Exp{
-    grid-area: exp;
+    grid-area: 'exp';
 }
 .EDU1{
-    grid-area: edu1;
+    grid-area: 'edu1';
     display: grid;
     grid-template-areas: 'edu11 edu12';
 }
 .EDU11{
-    grid-area: edu11;
+    grid-area: 'edu11';
 }
 .EDU12{
     padding-top: 30px;
-    grid-area: edu12;
+    grid-area: 'edu12';
     background-color: rgb(248, 219, 125);
 }
 .EDU2{
-    grid-area: edu2;
+    grid-area: 'edu2';
 }
 .EDU3{
-    grid-area: edu3;
+    grid-area: 'edu3';
 }
 .E3{
-    grid-area: ce;
+    grid-area: 'ce';
     width: 300px;
 }
 #Abilites{
+    z-index: 3;
     color: black;
     background-color: rgb(247, 140, 140);
     height: auto;
     width: auto;
 }
+
 #Abilites .AAbilites{
     background-color: aqua;
     border: 2px solid black;
@@ -256,46 +282,49 @@ body{
 }
 .APadding1{
     grid-area: aa;
+    width: 300px;
 }
 .AMain{
-    grid-area: ba;
+    grid-area: 'ba';
     display: grid;
     grid-template-areas: 'top'
     'bottom';
 }
 .AMHeading{
-    grid-area: top;
+    grid-area: 'top';
     text-align: center;
 }
 .AMData{
-    grid-area: bottom;
+    grid-area: 'bottom';
     display: grid;
     grid-template-areas: 'ada'
     'adb'
     'adc';
 }
 .AMData1{
-    grid-area: ada;
+    grid-area: 'ada';
 }
 .AMData1 td{
     width: 300px;
 }
 .AMData2{
-    grid-area: adb;
+    grid-area: 'adb';
 }
 .TTable td{
     width: 300px;
 }
 .AMData3{
-    grid-area: adc;
+    grid-area: 'adc';
 }
 .APadding2{
-    grid-area: ca;
+    grid-area: 'ca';
+    width: 300px;
 }
 #lang sub{
     font-size: small;
 }
 #Projects{
+    z-index: 4;
     color: black;
     background-color: rgb(178, 250, 71);
     height: auto;
@@ -312,11 +341,11 @@ body{
     grid-template-areas: 'apr bpr cpr';
 }
 .PRPadding1{
-    grid-area: apr;
+    grid-area: 'apr';
     width: 300px;
 }
 .PRmain{
-    grid-area: bpr;
+    grid-area: 'bpr';
     display: grid;
     grid-template-areas: 'a top b'
     'a bottom b';
@@ -362,10 +391,12 @@ body{
     width: 300px;
 }
 #Hobbies{
+    z-index: 5;
     color: black;
     background-color: rgb(245, 185, 163);
-    height: 700px;
+    height: auto;
     width: auto;
+    padding-bottom: 138px;
 }
 #Hobbies .AHobbies{
     background-color: aqua;
@@ -378,93 +409,91 @@ body{
     grid-template-areas: 'apr bpr cpr';
 }
 .HPadding1{
-    grid-area: apr;
-    width: 300px;
+    grid-area: 'apr';
+    padding-left: 100px;
+    width: auto;
 }
 .Hmain{
-    grid-area: bpr;
+    grid-area: 'bpr';
     display: grid;
-    grid-template-areas: 'a top b'
-    'a bottom b';
+    grid-template-areas: 'top'
+    'bottom';
 }
 .HMHeading{
-    grid-area: top;
+    grid-area: 'top';
     text-align: center;
-    width: 600px;
+    width: auto;
 }
 .HMData{
-    grid-area: bottom;
+    grid-area: 'bottom';
     display: grid;
     grid-template-areas: 'hm1 hm2 hm3';
 }
 .HMData1{
-    grid-area: hm1;
+    grid-area: 'hm1';
 }
 .HMData li{
     list-style-type: none;  
     text-align: center; 
 }
 .HMData2{
-    grid-area: hm2;
+    grid-area: 'hm2';
 }
 .HMData3{
-    grid-area: hm3;
+    grid-area: 'hm3';
 }
 .HPadding2{
-    grid-area: cpr;
-    width: 300px;
-}
-#Intrests{
-    color: black;
-    background-color: floralwhite;
-    height: 700px;
+    grid-area: 'cpr';
     width: auto;
 }
-#Intrests .AIntrests{
-    background-color: aqua;
-    border: 2px solid black;
-    border-radius: 8px;
-    padding: 2px;
+#Intrests{
+    z-index: 6;
+    color: black;
+    background-color: floralwhite;
+    height: auto;
+    width: auto;
+    padding-bottom: 50px;
 }
 .Igrid{
     display: grid;
     grid-template-areas: 'ag bg cg';
 }
 .IPadding1{
-    grid-area: ag;
-    width: 300px;
+    grid-area: 'ag';
+    width: auto;
 }
 .Imain{
-    grid-area: bg;
+    grid-area: 'bg';
     display: grid;
     width: 600px;
-    grid-template-areas: 'a top b'
-    'a bottom b';
+    grid-template-areas: 'top'
+    'bottom';
 }
 .IMHeading{
-    grid-area: top;
+    grid-area: 'top';
     text-align: center;
     width: 600px;
 }
 .IMData{
-    grid-area: bottom;
+    grid-area: 'bottom';
     display: grid;
     grid-template-areas: 'im1 im2';
 }
 .IMData1{
-    grid-area: im1;
+    grid-area: 'im1';
     width: 300px;
 }
 .IMData2{
-    grid-area: im2;
+    grid-area: 'im2';
+    width: 300px;
 }
 .IMData li{
     list-style-type: none;
     text-align: center;
 }
 .IPadding2{
-    grid-area: cg;
-    width: 300px;
+    grid-area: 'cg';
+    width: auto;
 }
 .footer{
     background-color: black;
@@ -473,23 +502,23 @@ body{
     color: white;
 }
 .foot1{
-    grid-area: af;
+    grid-area: 'af';
     width: 300px;
 }
 .foot2{
-    grid-area: bf;
+    grid-area: 'bf';
     display: grid;
     grid-template-areas: 'f1 f2';
 }
 .foot11{
-    grid-area: f1;
+    grid-area: 'f1';
     text-align: right;
 }
 .foot12{
     text-align: left;
-    grid-area: f2;
+    grid-area: 'f2';
 }
 .foot3{
-    grid-area: cf;
+    grid-area: 'cf';
     width: 300px;
 }
